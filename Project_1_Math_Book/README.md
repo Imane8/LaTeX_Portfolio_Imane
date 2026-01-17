@@ -1,10 +1,12 @@
 # Project 1 – Math Book
 
-LaTeX book layout for high school mathematics.
+High school mathematics book designed in LaTeX.
 
-✔ Custom section and exercise numbering  
-✔ Boxed definitions and remarks  
-✔ Clean spacing and readable typography  
+## Highlights
+- Clean and consistent layout
+- Custom numbering for definitions and exercises
+- Boxed environments for theorems and remarks
+- Optimized spacing for readability
 
-📄 Compiled PDF included  
-🛠 Source files available for demonstration purposes
+📄 PDF preview included.  
+🔒 Source files not shared to respect client confidentiality.
