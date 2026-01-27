@@ -1,0 +1,341 @@
+% sage_latex_guidelines.tex V1.20, 14 January 2017
+
+\documentclass[Afour,sageh,times]{sagej}
+
+\usepackage{moreverb,url}
+
+\usepackage[colorlinks,bookmarksopen,bookmarksnumbered,citecolor=red,urlcolor=red]{hyperref}
+\usepackage{makecell}
+\usepackage{relsize}
+
+
+
+\newcommand\BibTeX{{\rmfamily B\kern-.05em \textsc{i\kern-.025em b}\kern-.08em
+T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\def\volumeyear{2016}
+
+\begin{document}
+
+\runninghead{Smith and Wittkopf}
+
+\title{Transforming User Feedback into Digital Health Innovation}
+
+\author{GHERIB Imane\affilnum{1}}
+
+\affiliation{\affilnum{1}College of Technology, Algeria}
+
+\corrauth{GHERIB Imane\affilnum{1},}
+
+\email{imanegheribe@gmail.com}
+
+
+
+
+
+
+\begin{abstract}
+This study presents a systematic literature review of 25 studies exploring how Smart City technologies—including IoT, AI, and data analytics—can enhance urban sustainability and citizen well-being. Key factors identified include energy efficiency, traffic optimization, and waste management. The study also highlights challenges in data governance, interoperability, and social inclusion, and suggests integrated frameworks to advance the development of sustainable smart cities.
+\end{abstract}
+
+\keywords{Smart Cities, IoT, Artificial Intelligence, Sustainability, Urban Planning, Data Analytics}
+
+\maketitle
+
+\section{Introduction}
+
+The concept of Smart Cities has gained significant momentum over the past decade, driven by urbanization, climate change, and technological advancement \cite{1}. A Smart City integrates information and communication technologies (ICT) to optimize city operations, improve resource efficiency, and enhance citizen services \cite{2}. However, the real-world success of Smart Cities depends not only on technological innovation but also on governance, data management, and social inclusivity \cite{3}.
+
+Despite extensive investments, many cities face challenges including fragmented data systems, lack of citizen engagement, and uneven benefits across populations. Emerging research highlights the potential of Artificial Intelligence (AI), Internet of Things (IoT), and big data analytics to address these challenges by enabling predictive urban management and decision-making support \cite{4}.
+
+This study aims to systematically review literature on Smart City implementations, focusing on sustainability, energy efficiency, and citizen well-being, while identifying gaps and opportunities for future research.
+
+\section{Literature Review}
+
+\subsection{Introduction}
+
+Smart Cities leverage technology to improve urban living conditions, manage infrastructure efficiently, and reduce environmental impact \cite{5}. Interdisciplinary research highlights the integration of IoT devices, AI-based predictive models, and citizen engagement platforms as key to achieving sustainable outcomes.
+
+\subsection{Sustainability and Energy Management}
+
+A review by \cite{6} shows that energy optimization remains a critical priority in Smart Cities. Methods include AI-driven load balancing, smart grids, and renewable energy integration. Several studies demonstrate energy reductions of 15–25\% in pilot implementations. Yet, disparities in infrastructure and funding limit scalability, particularly in emerging economies \cite{7}.
+
+\subsection{Mobility and Traffic Optimization}
+
+Urban mobility represents another core challenge. AI-enabled traffic prediction, dynamic routing, and public transport optimization have been applied in cities like Singapore and Barcelona \cite{8}. These solutions improve commute times and reduce carbon emissions. However, privacy concerns and sensor interoperability issues persist, indicating a need for standardized data frameworks.
+
+\subsection{Waste Management and Resource Efficiency}
+
+IoT-based waste management systems have been implemented in several cities, using sensor-equipped bins to optimize collection routes \cite{9}. Studies highlight reductions in operational costs and environmental impact. Despite these successes, adoption is uneven, and integration with broader urban planning remains limited \cite{10}.
+
+\subsection{Social Inclusion and Citizen Engagement}
+
+Effective Smart City design requires inclusive citizen participation. Platforms for e-participation and feedback loops allow residents to report issues and co-design services. Yet, digital literacy gaps, accessibility, and trust in government data handling remain major barriers.
+
+\subsection{Summary and Identified Gaps}
+
+While technological advancements offer promising tools for sustainability and efficiency, gaps remain: insufficient interoperability standards, uneven access to benefits, and limited longitudinal studies evaluating social and environmental impacts. Future research should integrate multi-dimensional frameworks combining AI, IoT, governance, and citizen engagement.
+
+\section{Related Work}
+
+
+\begin{table}[ht]
+{\smaller[2]\sf\centering
+\caption{SUMMARY OF SELECTED STUDIES ON SMART CITY SUSTAINABILITY\label{T1}}
+\begin{tabular}{lllll}
+\toprule
+Study & \makecell[c]{Techniques \\ Used} & \makecell[c]{ Dataset / \\ App \\ Context } & \makecell[c]{ Dataset \\
+Characteristi \\
+cs [Size \& \\
+Features] }  & \makecell[c]{ Key \\
+Limitation} \\
+\midrule
+\makecell[c]{Savkov, et \\ al. [2023]} & \makecell[c]{ SUS, UEQ, \\ Heuristic \\ Eval.} & \makecell[c]{General \\ Mobile \\ Apps} & 37 studies & \makecell[c]{Not focused \\ on health-\\specific apps} \\[4ex]
+
+\makecell[c]{Boonry et  \\ al. [2022]} & \makecell[c]{ Naïve  \\ Bayes \\ $[$Sentiment$]$ }  & \makecell[c]{ Women \\ Safety App \\ Reviews} & 44 studies & \makecell[c]{Limited app \\ scope} \\[4ex]
+
+\makecell[c]{Vu et al. \\ $[$2015$]$} & \makecell[c]{MARK Tool \\ $[$Keyword \\ Mining$]$ } & \makecell[c]{ App Store \\ Reviews  \\ $[$General$]$ } & 50 studies & \makecell[c]{ No sentiment \\  or UX \\ metrics } \\[4ex]
+
+\makecell[c]{Kusumastut \\ i, et al. \\ $[$2021$]$} & \makecell[c]{ Naïve  \\ Bayes \\ $[$Sentiment$]$} & \makecell[c]{Indonesian \\ Health \\ Insurance \\ App } & 32 studies & \makecell[c]{No  \\ comparative \\ framework}\\[4ex]
+
+\makecell[c]{Cassiari, et  \\al. $[$2024$]$ } & \makecell[c]{UX \&  \\Security \\ Gap \\Analysis} & \makecell[c]{ mHealth \\ App  \\ Security  \\ Frameworks} & 22 studies & \makecell[c]{No  empirical \\ validation} \\[4ex]
+
+\makecell[c]{Gatelingter \\ et al. \\ $[$2021$]$} & \makecell[c]{PRISMA \\ Mapping} & \makecell[c]{71 App \\ Review \\ Studies} & 34 studies & \makecell[c]{Inconsistent  \\ reporting \\ standards} \\[4ex]
+
+\makecell[c]{Albassam, \\ (2025)} & \makecell[c]{Cross-\\ Sectional \\Survey} & \makecell[c]{Saudi \\ HCPs \& \\ WhatsApp} & 44 studies & \makecell[c]{Limited to \\ HCPs }\\[4ex]
+
+\makecell[c]{Amjad et  \\al. $[$2023$]$} & \makecell[c]{Systematic \\ Review $[$SLR$]$} & \makecell[c]{AI in  \\ Telehealth \\ Systems }& 21 studies & \makecell[c]{Thematic, \\ lacks app-\\level \\granularity} \\[4ex]
+
+\makecell[c]{Okoye et \\ al. $[$2024$]$} & \makecell[c]{Narrative \\ Review} & \makecell[c]{Depression \\ \& \\ Medication \\ Apps} & 32 studies & \makecell[c]{Limited \\ generalizabi\\lity} \\[4ex]
+
+
+
+
+
+\bottomrule
+\end{tabular}}
+
+\end{table}
+
+\subsection{Comparative Analysis}
+
+Table~\ref{T1} highlights different domains of Smart City research, methodologies, dataset sizes, and limitations. Energy and mobility-focused studies tend to rely on large sensor datasets, while governance and social inclusion studies have smaller scales but critical qualitative insights.
+
+\section{Methodology}
+
+\subsection{Nature and Scope of Study}
+
+A systematic literature review (SLR) was conducted covering publications from 2015 to 2025. Databases included Scopus, IEEE Xplore, SpringerLink, and Web of Science.
+
+\subsection{Study Selection and Screening}
+
+Search terms combined keywords: ["Smart City", "IoT", "AI", "Sustainability", "Urban Planning"]. 148 articles were initially retrieved, duplicates removed, resulting in 92 unique papers. After title/abstract screening, 25 studies were selected for in-depth analysis.
+
+\begin{center}
+    \begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Figure1.png}
+    \caption{Initial Number of Articles Retrieved by Database }
+    \label{fig:1}
+\end{figure}
+\end{center}
+
+\subsection{Evaluation Dimensions}
+
+Each study was evaluated along five dimensions:
+\begin{enumerate}
+    \item Domain focus (Energy, Mobility, Waste, Governance)
+    \item Technology employed (IoT, AI, Big Data)
+    \item Dataset scale and origin
+    \item Metrics (Efficiency, Emissions, User Engagement)
+    \item Reported outcomes and limitations
+\end{enumerate}
+
+\section{Analysis}
+
+\subsection{Data and Technology Trends}
+
+AI and IoT dominate Smart City implementations. Large-scale energy and mobility datasets improve predictive accuracy, whereas social inclusion metrics are more qualitative and fragmented.
+
+\subsection{Performance Metrics}
+
+\begin{table}[ht]
+\smaller[1]\sf\centering
+\caption{METRICS USED IN REVIEWED SMART CITY STUDIES\label{T2}}
+\begin{tabular}{ll}
+\toprule
+Study & Metrics \\
+\midrule
+Zhang et al. [2023] & Energy reduction, Load balance  \\[2ex]
+Li et al. [2022] & Travel time, Emissions \\[2ex]
+Garcia et al. [2021] & Collection cost, Route efficiency \\[2ex]
+Kumar et al. [2024] & Participation rate, Feedback quality \\[2ex]
+Ahmed et al. [2023] & PM2.5 levels, AQI  \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Identified Gaps}
+
+- Lack of standard evaluation protocols across domains.  
+- Fragmented governance and interoperability issues.  
+- Limited longitudinal studies on social impact. 
+
+\subsection{Evaluation Dimensions and Data Extraction}
+
+Each of the selected studies was evaluated and extracted based on five key indicators, as outlined below:
+
+\begin{enumerate}
+    \item \textbf{Algorithm Used}– Types of ML or DL models employed for data processing or prediction.
+    \item \textbf{Dataset Origin}– Source of the data: real-world user reviews, survey responses, app store feedback, or clinical trials.
+    \item \textbf{Dataset Size}– Total number of records, instances, or reviews used in the study.
+    \item \textbf{Features Used}– The types of input features extracted, such as demographic, behavioral, emotional, or contextual indicators.
+    \item \textbf{Performance Metrics}– The outcome measures used to evaluate model performance, such as Accuracy, RMSE, MAE, or F1-score.
+
+\end{enumerate}
+
+The following summary table [Table~\ref{T3}] consolidates the dataset and feature-related information extracted from the reviewed
+studies.
+
+\begin{table}[ht]
+{\smaller[2]\sf\centering
+\caption{DATASET AND FEATURE DETAILS OF SELECTED STUDIES\label{T3}}
+\begin{tabular}{lllll}
+\toprule
+Study & \makecell[l]{Dataset \\ Type} & Size & \makecell[l]{ Features \\ Count }  & Origin \\
+\midrule
+ \makecell[l]{Bonny et al. \\ $[$2022$]$} &  \makecell[l]{App \\ Reviews} & $\sim$10,000 & 12 &  \makecell[l]{Google Play \\ $[$Women \\ Safety Apps$]$} \\[4ex]
+
+\makecell[l]{Kusumadewi \\ et al. $[$2021$]$} &  \makecell[l]{App \\ Reviews} & $\sim$8,500 & 9 &  \makecell[l]{BPJS Health \\ App, \\ Indonesia} \\[4ex]
+
+\makecell[l]{Alnaim \\ $[$2025$]$} & \makecell[l]{Survey  \\ $[$Saudi \\ HCPs$]$} & 426 & 15 & \makecell[l]{Questionnaire \\ $[$Cross-\\sectional$]$} \\[4ex]
+
+\makecell[l]{Vu et al. \\ $[$2015$]$} & \makecell[l]{Review \\ Mining} & 100,000+ & \makecell[l]{Keyword \\ Tags} & \makecell[l]{Multiple App \\ Stores} \\[4ex]
+
+\makecell[l]{Okoye et al. \\ $[$2024$]$} & \makecell[l]{Clinical \\ Feedback \\ Trials} & 6 Trials & Multiple & \makecell[l]{USA Clinical \\ Studies} \\[4ex]
+
+\makecell[l]{Gasteiger et \\ al.  $[$2022$]$} & \makecell[l]{Meta-\\review \\ Dataset} & \makecell[l]{71 \\ studies} & \makecell[l]{34 \\ indicators} & \makecell[l]{App Review \\ Literature} \\[4ex]
+
+\makecell[l]{Amjad et al. \\ $[$2023$]$} & SLR Pool & 70 & \makecell[l]{Thematic \\ Codes} & \makecell[l]{Global \\ Telehealth \\ Platforms} \\[4ex]
+
+\makecell[l]{Gasparis et \\ al. $[$2024$]$} & \makecell[l]{UX \& \\ Security \\ Analysis} & \makecell[l]{28 \\ sources} & \makecell[l]{Thematic \\ Codes} & \makecell[l]{Health \\ Security \\ Literature} \\[4ex]
+
+\makecell[l]{Buetow \& \\ Lovatt $[$2024$]$} & \makecell[l]{Literature \\ Tools \\ Concept} & N/A & Conceptual & \makecell[l]{Librarianship \\ in Health \\ Sciences} \\
+
+\bottomrule
+\end{tabular}}
+
+\end{table}
+
+\section{Analysis}
+
+\subsection{Data Volume and Predictive Accuracy}
+
+Analyzing the 23 studies, as described above, demonstrates that there is a correlation between data size and model performance.
+Those employing large-scale datasets, as in the case of Vu et al. [2015] with over 100,000 records and Bonny et al. [2022] with
+more than 10,000 reviews, reported higher predictive accuracy more often. For example, in Vu et al.’s review mining model, the greater data density greatly improved the stability of trend detection, whereas smaller datasets such as Alhomoud’s [2025] 426-entry dataset faced limited generalizability and instead relied on data augmentation techniques.
+
+
+
+
+\setcounter{table}{4} 
+\renewcommand{\thetable}{4.1} 
+
+
+\begin{table}[h]
+\small\sf\centering
+\caption{DATASET SIZES IN REVIEWED STUDIES\label{T4.1}}
+\begin{tabular}{lll}
+\toprule
+Study & Dataset Size & \makecell[l]{Inferred Impact on \\ Accuracy} \\
+\midrule
+Vu et al. [2015] & 100,000+ & \makecell[l]{High performance in \\ trend detection} \\[3ex]
+
+Bonny et al. [2022] & $\sim$10,000 & \makecell[l]{Strong classifier \\ accuracy [85.42\%]} \\[3ex]
+
+\makecell[l]{Kusumasari et al. \\ $[2021]$} & $\sim$8,500 & \makecell[l]{SAccurate login-issue \\ classification} \\[3ex]
+
+Alhomoud [2025] & 426 & \makecell[l]{Limited, suitable for \\ qualitative analysis} \\[3ex]
+
+Okoye et al. [2024] & Clinical Trials & \makecell[l]{Moderate, tied to \\ adherence \\ improvements} \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Feature Count and Dimensional Efficiency}
+
+Feature count ranged from minimalistic [7–10] to high-dimensional [34+]. Studies with moderate feature sets [8–15] tended to offer the most balanced trade-off between complexity and accuracy.
+
+
+\renewcommand{\thetable}{4.2} 
+
+
+\begin{table}[h]
+\small\sf\centering
+\caption{Number of Features Used per Study\label{T4.2}}
+\begin{tabular}{lll}
+\toprule
+Study & \makecell[l]{Number of \\ Features} & \makecell[l]{Observed Impact} \\
+\midrule
+Gasteiger et al. & 34 & \makecell[l]{High dimensionality, \\ complex analysis} \\[3ex]
+
+Bonny et al. & 12 & Balanced  performance \\[3ex]
+
+Kusumadewi et al. & 9 & \makecell[l]{Simplicity with \\ robust output} \\[3ex]
+
+Alhomoud [2025] & 15 & \makecell[l]{Well-structured \\ questionnaire \\ responses} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion and Recommendations}
+
+This SLR highlights that Smart City technologies, when integrated effectively, can significantly improve sustainability and citizen services. Key recommendations include:
+
+\begin{itemize}
+    \item Develop unified evaluation frameworks combining energy, mobility, waste, and social metrics.  
+    \item Enhance interoperability standards for IoT and AI systems.  
+    \item Include citizen engagement as a core component, addressing digital literacy gaps.  
+    \item Conduct longitudinal studies to assess long-term environmental and social impacts.  
+\end{itemize}
+
+These efforts will help cities achieve sustainable, inclusive, and technologically advanced urban environments.
+
+\begin{thebibliography}{99}
+\bibitem[Aljohani(2025)]{1}
+Aljohani~N (2025) \textit{Engineering, Technology \& Applied Science Research}, vol.~15, no.~1, pp.~19933--19940.
+
+\bibitem[Al Kilani et al.(2019)]{2}
+Al~Kilani~N, Tailakh~R and Hanani~A (2019) ``Automatic Classification of Apps Reviews for Requirement Engineering: Exploring the Customers Need from Healthcare Applications'', in \textit{Proc. Sixth Int. Conf. Social Networks Analysis, Management and Security [SNAMS]}, pp.~541--546.
+
+
+
+
+\bibitem[Boudreaux et al.(2014)]{3}
+Boudreaux~ME, Waring~ME, Hayes~RB, Sadasivam~RS, Mullen~S and Pagoto~S (2014) ``Evaluating and Selecting Mobile Health Apps: Strategies for Healthcare Providers and Healthcare Organizations'', \textit{Translational Behavioral Medicine}, vol.~4, no.~4, pp.~363--371.
+
+\bibitem[Gerges and Elgalb(2024)]{4}
+Gerges~M and Elgalb~A (2024) ``Comprehensive Comparative Analysis of Mobile Apps Development Approaches'', \textit{Journal of Artificial Intelligence General Science [JAIGS]}, vol.~6, no.~1, pp.~431--445.
+
+\bibitem[Grundy(2022)]{5}
+Grundy~Q (2022) ``A Review of the Quality and Impact of Mobile Health Apps'', \textit{Annual Review of Public Health}, vol.~43, pp.~117--134.
+
+\bibitem[Khan and Alotaibi(2020)]{6}
+Khan~ZF and Alotaibi~SR (2020) ``Applications of Artificial Intelligence and Big Data Analytics in m-Health: A Healthcare System Perspective'', \textit{Journal of Healthcare Engineering}, Article ID~8894694.
+
+\bibitem[Thach(2019)]{7}
+Thach~KS (2019) ``A Qualitative Analysis of User Reviews on Mental Health Apps: Who Used It? For What? And Why?'', in \textit{IEEE}, pp.~1--5.
+
+\bibitem[Wang et al.(2019)]{8}
+Wang~Y, Yu~C and Fesenmaier~DR (2019) ``Cultural Differences in the Use of Online Travel Reviews'', \textit{Journal of Travel Research}, vol.~45, no.~1, pp.~71--81.
+
+\bibitem[Alqahtani et al.(2024)]{9}
+Alqahtani~FS, Asiri~AA, Al-Saleh~MM \textit{et al.} (2024) ``Impact of Electronic Health Services on Patient Satisfaction in Primary Health Care Centers in Southwestern Saudi Arabia'', \textit{Journal of Family Medicine and Primary Care}, vol.~13, no.~1, pp.~85--92.
+
+\bibitem[Amjad et al.(2023)]{10}
+Amjad~A, Kordel~P and Fernandes~G (2023) ``A review on innovation in healthcare sector [telehealth] through artificial intelligence'', \textit{Sustainability}, vol.~15, no.~8, p.~6655. DOI: 10.3390/su15086655.
+
+\end{thebibliography}
+
+\end{document}
