@@ -17,7 +17,8 @@ The repository focuses on **document architecture and layout engineering**, not 
 - `Preview.pdf` – Compiled layout preview
 
 ## Purpose
-This project demonstrates my ability to design, maintain, and structure complex LaTeX documents for academic and professional use.
+This project demonstrates my ability to design, maintain, and structure complex LaTeX documents for academic and professional use.  
+It is also structured as a **reusable LaTeX template**, suitable for future theses, technical reports, or long-form scientific documents.
 
 **Author:** Imane Gherib  
 LaTeX Editor – Academic & Technical Documentation
