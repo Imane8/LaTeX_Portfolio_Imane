@@ -1,0 +1,342 @@
+\documentclass[12pt,a4paper,twoside,openright]{report}
+% ======================================================================
+% PARTIE 1 : CONFIGURATION DE BASE DU DOCUMENT
+% ======================================================================
+\renewcommand{\thechapter}{\Roman{chapter}}
+
+% ======================================================================
+% PARTIE 2 : PAQUETS ESSENTIELS (ORDRE OPTIMAL)
+% ======================================================================
+\usepackage[utf8]{inputenc}                % Encodage des caractères
+\usepackage[T1]{fontenc}                   % Meilleur support des accents
+\usepackage[french]{babel}                 % Langue française
+\usepackage{aeguill}                       % Guillemets français
+\usepackage{ae}                            % Font extensions
+
+% ======================================================================
+% PARTIE 3 : PAQUETS DE MISE EN PAGE ET GRAPHIQUES
+% ======================================================================
+\usepackage[width=170mm,top=25mm,bottom=20mm]{geometry} % Marges
+\usepackage{setspace}                      % Interligne
+\usepackage{fancyhdr}                      % En-têtes et pieds de page
+\usepackage{titlesec}                      % Formatage des titres
+\usepackage{eso-pic}                       % Positionnement absolu
+\usepackage{xspace}                        % Espacement intelligent
+\usepackage{float}                         % Positionnement des flottants
+\usepackage{rotating}                      % Rotation d'éléments
+\usepackage[center]{subfigure}             % Sous-figures
+\usepackage{longtable}                     % Tableaux longs
+\usepackage{multirow}                      % Cellules fusionnées
+\usepackage{array}                         % Tableaux avancés
+\usepackage{enumitem}                      % Listes personnalisées
+
+\usepackage{algorithm}      % Pour les environnements algorithm
+\usepackage{algpseudocode}  % Pour le pseudocode (style algorithmique)
+
+% ======================================================================
+% PARTIE 4 : PAQUETS MATHEMATIQUES ET SCIENTIFIQUES
+% ======================================================================
+\usepackage{amsmath,amssymb}               % Mathématiques
+\usepackage{siunitx}                       % Unités scientifiques
+\usepackage{breakcites}                    % Césure des citations
+
+% ======================================================================
+% PARTIE 5 : PAQUETS VISUELS ET COULEURS
+% ======================================================================
+\usepackage{graphicx}                      % Images (version standard)
+\usepackage{epsfig}                        % Figures EPS (obsolète, mais conservé)
+\usepackage{color,soul}                    % Couleurs et surlignage
+\usepackage[font={it}]{caption}           % Légendes en italique     
+
+% ======================================================================
+% PARTIE 6 : PAQUETS SPECIFIQUES AU PROJET
+% ======================================================================
+\usepackage[french]{minitoc}               % Mini tables des matières
+\usepackage{frbib_jlh}                     % Style bibliographique
+
+% ======================================================================
+% PARTIE 7 : CONFIGURATIONS GLOBALES
+% ======================================================================
+\setcounter{minitocdepth}{5}               % Profondeur de la mini-TdM
+\setcounter{secnumdepth}{3}                % Profondeur de numérotation
+\setcounter{tocdepth}{3}                   % Profondeur de la TdM
+
+% ======================================================================
+% PARTIE 8 : CONFIGURATION HYPERREF (DOIT ÊTRE APRÈS LA PLUPART DES PAQUETS)
+% ======================================================================
+
+\usepackage[bookmarks=true,bookmarksopen=true]{hyperref}
+
+\hypersetup{
+    pdftitle={Mémoire de thèse Tuan-Long CHU},
+    pdfauthor={Tuan-Long CHU},
+    pdfsubject={Le sujet de ce mémoire de thèse porte sur...},
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black
+}
+
+% ======================================================================
+% PARTIE 9 : PERSONNALISATION DES EN-TÊTES ET PIEDS DE PAGE
+% ======================================================================
+\pagestyle{fancy}
+\newcommand{\changefont}{\fontsize{12}{14}\selectfont}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\ #1}{\thechapter\ #1}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\fancyhf{}
+
+% Style pour les pages "plain" (début de chapitre)
+\fancypagestyle{plain}{%
+    \fancyhf{}%
+    \fancyfoot[C]{- \thepage\ -}%
+    \renewcommand{\headrulewidth}{0pt}% Pas de ligne d'en-tête
+    \renewcommand{\footrulewidth}{0.0pt}% Ligne de pied de page invisible
+}
+
+% Configuration par défaut
+\fancyfoot[C]{\em\thepage}
+\fancyhead[LO]{\em\leftmark}
+\fancyhead[RE]{\em\leftmark}
+
+% Augmenter la hauteur de l'en-tête pour éviter les warnings
+\setlength{\headheight}{14.5pt}
+
+% ======================================================================
+% PARTIE 10 : ABRÉVIATIONS MATHÉMATIQUES
+% ======================================================================
+\let\d=\partial
+\let\f=\frac
+\let\lam=\lambda
+\let\eps=\varepsilon
+\let\vect=\overrightarrow
+\let\bs=\bigskip
+\let\wt=\widetilde
+\let\ol=\overline
+\let\ds=\displaystyle
+
+% ======================================================================
+% PARTIE 11 : DÉFINITIONS FRANÇAISES
+% ======================================================================
+\addto\captionsfrench{
+    \def\figurename{{\itshape Figure}}
+    \def\tablename{{\itshape Tableau}}
+    \def\listfigurename{Liste des figures}
+    \def\listtablename{Liste des tableaux}
+}
+
+% ======================================================================
+% PARTIE 12 : ENVIRONNEMENTS PERSONNALISÉS
+% ======================================================================
+\newenvironment{changemargin}[2]{%
+    \begin{list}{}{%
+        \setlength{\topsep}{0pt}%
+        \setlength{\topmargin}{#1}%
+        \setlength{\bottommargin}{#2}%
+        \setlength{\listparindent}{\parindent}%
+        \setlength{\itemindent}{\parindent}%
+        \setlength{\parsep}{\parskip}%
+    }%
+    \item[]}{\end{list}}
+
+
+% ======================================================================
+% PARTIE 13 : DÉBUT DU DOCUMENT
+% ======================================================================
+\begin{document}
+% ----------------------------------------------------------------------
+% PAGES PRÉLIMINAIRES (SANS NUMÉROTATION OU NUMÉROTATION ROMAINE)
+% ----------------------------------------------------------------------
+\pagestyle{empty} % Pas d'en-têtes pour les pages préliminaires
+
+% Page de garde
+\input{./page_de_garde/page_de_garde}
+\cleardoublepage
+
+% Remerciements
+\input{./remerciements/remerciements}
+\clearpage
+
+% Résumé
+\input{./resume/resume}
+\clearpage
+
+% Dédicaces
+\input{./Dedicaces/Dedicaces}
+\clearpage
+
+% Liste des symboles et abréviations
+\input{./Symboles/Symboles}
+\clearpage
+
+% ----------------------------------------------------------------------
+% TABLES DES MATIÈRES ET LISTES
+% ----------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhead[LO]{\changefont \em Table des matières}
+\fancyhead[RE]{\changefont \em Table des matières}
+\fancyfoot[C]{- \thepage \ -}
+\pagenumbering{Roman} % Numérotation en chiffres romains
+
+% Table des matières principale
+\pdfbookmark[0]{Table des matières}{Table des matières}
+\tableofcontents
+\cleardoublepage
+
+% Liste des figures
+\fancyhead[LO]{\changefont \em Liste des figures}
+\fancyhead[RE]{\changefont \em Liste des figures}
+\pdfbookmark[0]{Liste des figures}{liste des figures}
+\listoffigures
+\cleardoublepage
+
+% Liste des tableaux
+\fancyhead[LO]{\changefont \em Liste des tableaux}
+\fancyhead[RE]{\changefont \em Liste des tableaux}
+\pdfbookmark[0]{Liste des tableaux}{liste des tableaux}
+\listoftables
+\cleardoublepage
+
+% ----------------------------------------------------------------------
+% CORPS DU DOCUMENT (NUMÉROTATION ARABE)
+% ----------------------------------------------------------------------
+\begin{onehalfspacing} % Interligne 1.5
+
+% Introduction générale
+\addcontentsline{toc}{chapter}{Introduction générale}
+\fancyhead[LO]{\changefont \em Introduction générale}
+\fancyhead[RE]{\changefont \em Introduction générale}
+\fancyfoot[CE,CO]{- \thepage \ -}
+\include{./introduction/introduction}
+
+% Chapitre 1
+\cleardoublepage
+\fancyhf{}
+\fancyfoot[CE,CO]{- \thepage \ -}
+\renewcommand{\changefont}{\fontsize{9}{12}\selectfont}
+\fancyhead[LO]{\changefont \textit{Chapitre} \em\leftmark}
+\fancyhead[RE]{\changefont \textit{Chapitre} \em\rightmark}
+\input{./chapitre_1/chapitre_1}
+
+% Chapitre 2
+\cleardoublepage
+\fancyhf{}
+\fancyfoot[CE,CO]{- \thepage \ -}
+\renewcommand{\changefont}{\fontsize{9}{12}\selectfont}
+\fancyhead[LO]{\changefont \textit{Chapitre} \em\leftmark}
+\fancyhead[RE]{\changefont \textit{Chapitre} \em\rightmark}
+\input{./chapitre_2/chapitre_2}
+
+% Chapitre 3
+
+\fancyhf{}
+\fancyfoot[CE,CO]{- \thepage \ -}
+\renewcommand{\changefont}{\fontsize{9}{12}\selectfont}
+\fancyhead[LO]{\changefont \textit{Chapitre} \em\leftmark}
+\fancyhead[RE]{\changefont \textit{Chapitre} \em\rightmark}
+\input{./chapitre_3/chapitre_3}
+
+% Conclusion générale
+\clearpage
+\fancyhead[LO]{\em Conclusions générales et perspectives}
+\fancyhead[RE]{\em Conclusions générales et perspectives}
+\fancyfoot[C]{- \thepage \ -}
+\include{./conclusion/conclusion}
+
+\end{onehalfspacing}
+
+% ----------------------------------------------------------------------
+% RÉFÉRENCES BIBLIOGRAPHIQUES
+% ----------------------------------------------------------------------
+
+\addcontentsline{toc}{chapter}{Références bibliographiques}
+\fancyhead[LO]{\em Références bibliographiques}
+\fancyhead[RE]{\em Références bibliographiques}
+\fancyfoot[C]{- \thepage \ -}
+
+\bibliographystyle{plain}
+
+\begin{thebibliography}{99}
+
+	\bibitem{Ali} Ali Mustafa Qamar, Eric Gaussier Apprentissage de différentes classes de similarité dans les K-PPV 2016.
+	
+	 \bibitem{Baggin} Introduction aux méthodes d'agrégation : boosting, baggin et forêts aléatoires. Illustrations avec R. université Rennes 2.
+	 
+	 \bibitem{Baïna} Baïna S., Panetto H. et Benali K., Apport de l'approche MDA pour une interopérabilité sémantique : Interopérabilité des systèmes d'information d'entreprise, Processus d?entreprise et SI, RSTI-ISI, pp.11-29, novembre 2006.
+	 
+	 \bibitem{BARIGOU} BARIGOU Fatiha CONTRIBUTION À LA CATÉGORISATION DE TEXTES ET À L'EXTRACTION D'INFORMATION.
+	 	
+	 \bibitem{Benchettouh} BENCHETTOUH Salah Eddine  Elaboration d'un système de prédiction des pannes et de planification des maintenances.
+	 
+	\bibitem{BREIMAN} Leo Breiman, Random Forests 1999-2001.
+	
+	\bibitem{Bruno} Bruno Taconet, Abderrazak Zahour, Saîd Ramadane, Wafa Boussella Cllassification des K-PPV par sous-voisinages embloîtés 2006.		
+	 		
+	\bibitem{Boucly} Boucly F., Le management de la maintenance : Evolution et mutation, Editions Afnor, 1998.
+	 
+	\bibitem{Chapman} Chapman et Hall DATA Classification Algorithms and Applications.
+	
+	\bibitem{Christophe} Christophe Chesneau éléments de classification	2016.
+	    
+	\bibitem{Cornuéjols} A.Cornuéjols, L.Miclet, Y.Kodratoff Apprentissage artificiel EYROLLES.
+	
+	\bibitem{DJEFFAL} Abdelhamid DJEFFAL.Utilisation des méthodes Support Vector Machine (SVM) dans l'analyse des bases de données Université Mohamed Khider, Biskra Abdelhamid DJEFFAL.
+		
+	\bibitem{Eric} Ali Mustafa Qamar, Eric Gaussier Similarity learning in Nearest Neighbor and Application to information Retrieval 2014.
+			
+	\bibitem{Ethem} Ethem Alpaydin Introduction to machine learning.
+	
+	\bibitem{Eve} Eve Mathieu-Dupas Algorithme des k plus proches voisins pondérés et application en diagnostic 2010.
+		
+		
+	\bibitem{Fabien} Fabien Torre un algorithme stochastique pour l'apprentissage supervisé et non-supervisé.
+	
+	\bibitem{Faïcel} Faïcel Chamroukhi.Classification supervisé : les K-plus proches voisins, université de Caen.
+	
+	\bibitem{Faouzi} M. ZAIZ Faouzi  Les Supports Vecteurs Machines (SVM) pour la reconnaissance des caractères manuscrits arabes université Mohamed Khider Biskra
+		
+	\bibitem{Francastel} Francastel J.C., Externalisation de la maintenance : Stratégies, méthodes et contrats. Dunod, Paris, 2003.
+	
+	\bibitem{Intro} K.Gosalia,Ph.D., CFA, CPA, CGA Rock Lefebvre, MBA, FCIS, FCPA, FCGA Introduction à l'apprentissage automatique; MONOGRAPHIE DE CPA NOUVEAU-BRUNSWICK; 
+		
+		
+	\bibitem{Kaffel} Kaffel H., La maintenance distribuée: concept, évaluation et mise en oeuvre. Thèse de doctorat, Université Laval,
+	Quebec, 2001.
+	
+	\bibitem{Kahn} Kahn J., Overview of MIMOSA and the Open System Architecture for Enterprise Application Integration. Proc.
+	of COMADEM 2003, pp. 661-670, Växjö University, Sweden, 2003.
+	
+	
+	\bibitem{Kamalesh} kamalesh Gosalia, Roch Lefebvre Introduction à l'apprentissage automatique.
+		
+	\bibitem{Karem} F.Karem, M.Dhibi, A.Martin Combinaison de classification supervisée et non-supervisée par la théorie des fonctions de croyance.
+		
+	\bibitem{Loughani} A.LOUGHANI + JNB cours.
+			
+	\bibitem{Machine} Introduction to Machine Learning with Python Andreas C. Müller Sarah Guido.
+	
+	\bibitem{Norman} Norman Matloff Statistical Regression and Classification.	    
+		    
+	\bibitem{Mifdal} Rachid MIFDAL  PReSENTe a L'eCOLE DE TECHNOLOGIE SUPeRIEURE COMME EXIGENCE PARTIELLE À L'OBTENTION DE LA MAÎTRISE AVEC MeMOIRE EN GeNIE, CONCENTRATION PERSONNALISeE M. Sc. A.
+		
+	\bibitem{Mce} F.Monchy, J.Vernier MAINTENANCE Méthodes et organisations DUNOD.
+	
+ 	\bibitem{Rudolph} Rudolph Russell Machine learning.
+ 	
+	\bibitem{Zerhouni} I.Rasovska, B.Chebel-Morello, N.Zerhouni.  Classification des différentes architectures en maintenance. 
+	
+\end{thebibliography}
+	
+
+% ----------------------------------------------------------------------
+% ANNEXES
+% ----------------------------------------------------------------------
+\cleardoublepage
+\appendix % Commande pour indiquer le début des annexes
+\pagestyle{fancy}
+\fancyhead[LO]{\changefont \em ANNEXES}
+\fancyhead[RE]{\changefont \em ANNEXES}
+\fancyfoot[CE,CO]{- \thepage \ -}
+\include{./ANNEXES/annexes}
+
+\end{document}
